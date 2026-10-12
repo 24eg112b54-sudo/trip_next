@@ -8,4 +8,5 @@ backend/target/
 .vscode/
 node_modules/
 .tools/
-
+.vercel/
+.env.local
