@@ -42,7 +42,7 @@ java -jar backend\target\tripnest-backend-1.0.0.jar
 3. Start the frontend in another PowerShell window:
 
 ```powershell
-node frontend/server.mjs
+node frontend/local-server.mjs
 ```
 
 Open http://127.0.0.1:5500/ and check http://127.0.0.1:8080/api/health.
