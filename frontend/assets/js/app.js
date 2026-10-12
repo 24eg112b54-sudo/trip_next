@@ -1,4 +1,5 @@
-const API = (window.TRIPNEST_API || 'http://localhost:8080/api').replace(/\/$/, '');
+const defaultApi = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://localhost:8080/api' : 'https://trip-next.onrender.com/api';
+const API = (window.TRIPNEST_API || defaultApi).replace(/\/$/, '');
 const $ = (selector) => document.querySelector(selector);
 const token = () => sessionStorage.getItem('tripnest_token');
 const pagePrefix = () => location.pathname.includes('/pages/') ? '' : 'pages/';
