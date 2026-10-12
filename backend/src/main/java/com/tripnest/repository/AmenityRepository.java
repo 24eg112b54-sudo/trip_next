@@ -1,0 +1,1 @@
+package com.tripnest.repository; import com.tripnest.entity.Amenity; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface AmenityRepository extends JpaRepository<Amenity,Long>{Optional<Amenity> findByNameIgnoreCase(String name);}
