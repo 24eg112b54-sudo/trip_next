@@ -1,0 +1,4 @@
+package com.tripnest.entity;
+import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity @Table(name="wishlists", uniqueConstraints=@UniqueConstraint(name="uk_wishlist_user_accommodation", columnNames={"user_id","accommodation_id"}))
+public class WishlistItem { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="user_id") User user; @ManyToOne(fetch=FetchType.LAZY,optional=false) @JoinColumn(name="accommodation_id") Accommodation accommodation; @Column(name="created_at",nullable=false) LocalDateTime createdAt; @PrePersist void create(){createdAt=LocalDateTime.now();} public void setUser(User v){user=v;} public void setAccommodation(Accommodation v){accommodation=v;} public Accommodation getAccommodation(){return accommodation;} }

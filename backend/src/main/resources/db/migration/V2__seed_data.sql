@@ -1,0 +1,7 @@
+INSERT INTO amenities(name) VALUES ('WiFi'),('Swimming pool'),('Free parking'),('Air conditioning'),('Breakfast included'),('Kitchen'),('Gym');
+INSERT INTO accommodations(name,type,city,country,address,short_description,description,price_per_night,max_guests,rating,active,created_at,updated_at) VALUES
+('The Banyan House','VILLA','Goa','India','Candolim Beach Road','A calm villa minutes from the sea.','A bright, spacious stay with a private garden and thoughtful local hosting.',145.00,4,4.8,TRUE,NOW(6),NOW(6)),
+('Lakeview Loft','APARTMENT','Udaipur','India','Lake Pichola','A romantic loft with beautiful lake views.','A comfortable city base with a full kitchen and an unforgettable sunset view.',92.00,2,4.6,TRUE,NOW(6),NOW(6)),
+('Pine & Peak Lodge','LODGE','Manali','India','Old Manali','A warm mountain lodge for slow mornings.','Wood, sunlight and mountain air come together in this welcoming lodge.',118.00,5,4.7,TRUE,NOW(6),NOW(6));
+INSERT INTO accommodation_images(accommodation_id,url,sort_order) SELECT id, CASE name WHEN 'The Banyan House' THEN 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80' WHEN 'Lakeview Loft' THEN 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80' ELSE 'https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80' END,0 FROM accommodations;
+

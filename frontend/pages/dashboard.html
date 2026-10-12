@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your TripNest dashboard</title><link rel="stylesheet" href="../assets/css/style.css">
+<style>
+.dashboard{max-width:1200px;margin:auto;padding:52px 6% 80px}.dashboard-hero{display:flex;justify-content:space-between;align-items:end;gap:30px;padding:20px 0 46px}.dashboard-hero h1{font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:12px}.button-link{display:inline-block;background:var(--ink);color:#fff;padding:14px 20px;border-radius:4px;font-weight:bold}.dashboard-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:64px}.stat-card{background:#fff;padding:24px;border-top:3px solid var(--accent);box-shadow:0 8px 30px #1723210b}.stat-card span,.stat-card strong{display:block}.stat-card strong{font:2.4rem Georgia,serif;margin-top:8px}.dashboard-section{margin-top:48px}.dashboard-section h2{margin:10px 0 18px}@media(max-width:650px){.dashboard-hero{display:block}.button-link{margin-top:22px}.dashboard-stats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><a class="brand" href="../index.html">TRIP<span>NEST</span></a><nav><a href="../index.html">Explore</a><a href="bookings.html">My bookings</a><button id="logout" class="link-button">Sign out</button></nav></header>
+<main class="dashboard">
+<section class="dashboard-hero"><div><p class="eyebrow">YOUR TRIPNEST</p><h1 id="dashboardGreeting">Your dashboard</h1><p class="lede">Keep track of your stays, saved places, and next journeys.</p></div><a class="button-link" href="accommodations.html">Explore stays</a></section>
+<section class="dashboard-stats" id="dashboardStats"><article class="stat-card"><span class="muted">Upcoming trips</span><strong>—</strong></article><article class="stat-card"><span class="muted">Completed trips</span><strong>—</strong></article><article class="stat-card"><span class="muted">Saved stays</span><strong>—</strong></article></section>
+<section class="dashboard-section"><div class="section-head"><div><p class="eyebrow">YOUR JOURNEYS</p><h2>Upcoming trips</h2></div><a class="text-link" href="bookings.html">View all →</a></div><div id="dashboardUpcoming"><p class="muted">Loading your trips…</p></div></section>
+<section class="dashboard-section"><div class="section-head"><div><p class="eyebrow">LOOKING BACK</p><h2>Past trips</h2></div></div><div id="dashboardPast"><p class="muted">Loading your trips…</p></div></section>
+<section class="dashboard-section"><div class="section-head"><div><p class="eyebrow">YOUR SHORTLIST</p><h2>Saved stays</h2></div><a class="text-link" href="wishlist.html">View wishlist →</a></div><div id="dashboardWishlist" class="grid"><p class="muted">Loading saved stays…</p></div></section>
+<p id="dashboardMessage" class="message"></p></main><footer>© 2026 TripNest · Where every journey finds a home</footer><script src="../assets/js/app.js"></script>
+</body></html>
